@@ -1,3 +1,5 @@
+/* CSS HEADER */
+
 .get-start{
     background-color: #03A87C;
     border-color: #03A87C;
@@ -36,6 +38,7 @@
     font-weight: bold;
 }
 
+/* CSS FOR FOOTERS*/
 ul li{
     display: inline-block;
     color: white;
