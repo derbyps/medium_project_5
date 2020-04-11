@@ -82,24 +82,27 @@
             <hr style="width: 1100px;">                          
         </div>
     </section>
+
     <section class="utama">
         <div class="container">
             <div class="row artikel-utama">
                 <div class="col-sm-8">
+                    {% for artikel in artikels %}
                     <div class="container">
                         <div class="row daftar-artikel">
                             <div class="col-sm-8">
                                 <h6 style="color: gray;">BASED ON YOUR READING HISTORY</h6>
-                                <h5>13 Things You Need To Be Willing To Lose If You Really Want To Change Your Life For The Better</h5>
-                                <p>It’s so easy to identify what you need to do to change your life. It’s so hard to accept what you need to let go of, what weeds you need to…</p>
-                                <p>Brianna Wiest</p>
-                                <p>Aug 7, 2018</p>
+                                <h5>{{artikel.judul_artikel}}</h5>
+                                <p>{{artikel.isi_artikel|truncatewords:15}}</p>
+                                <span style="font-size: 13px; font-weight: bold;">{{artikel.author}}</span><br>
+                                <span style="font-size: 13px; color: #B78F7F;">{{artikel.pub_date}}</span>
                             </div>
                             <div class="col-sm-4">
-                                <img src="{% static 'images/corona virus.jpeg' %}" class="img-fluid">
+                                <img src="{% static 'images/' %} {{artikel.media_artikel}}" class="img-fluid">
                             </div>
                         </div>
-                    </div>        
+                    </div><br>
+                    {% endfor %}        
                 </div>
                 <div class="col-sm-4">
                     <section class="bagian-biru" style="background-color: #D7EFEE;">

@@ -8,6 +8,9 @@ class Users(models.Model):
     email_user = models.CharField(max_length=100)
     profile_pic = models.FileField()
     password = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.username
 
 class Kategori(models.Model):
     nama_kategori = models.CharField(max_length=255)
