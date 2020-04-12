@@ -4,6 +4,8 @@ from .models import Artikel, Respon, Users
 from .forms import Search
 from django.core.paginator import Paginator
 from django.views.generic import ListView
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 
 def index(request):
@@ -67,3 +69,17 @@ def search(request):
              }
     
     return render(request, 'search.html', context)
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            # login(request, user)
+            return redirect('artikel')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form_signup': form})

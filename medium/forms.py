@@ -1,5 +1,7 @@
 from django import forms
 from .models import Respon, Like
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 
 
@@ -8,12 +10,11 @@ from .models import Respon, Like
 class Search(forms.Form):
     search = forms.CharField(max_length=100)
 
-# class ResponForm(forms.ModelForm):
-#     class Meta:
-#         model = Respon
-#         fields = '__all__'
+class SignUpForm(UserCreationForm):
+    email = forms.EmailField(max_length=100, help_text='Required. Inform a valid email address.')
 
-# class LikeForm(forms.ModelForm):
-#     class Meta:
-#         model = Like
-#         fields = '__all__'
+    class Meta:
+        model = User
+        fields = ('email', 'password1', 'password2')
+
+        

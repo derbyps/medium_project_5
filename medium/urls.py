@@ -10,4 +10,5 @@ urlpatterns =[
     path('search/', views.search, name='search'),
     path('detailresponse/', views.detailrespon, name='detailrespon'),
     path('detailresponse/<int:artikel_id>/', views.respon_detail, name='respon_detail'),
+    path('signup/', views.signup, name='signup'),
 ]
