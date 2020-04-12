@@ -6,6 +6,7 @@ from django.core.paginator import Paginator
 from django.views.generic import ListView
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from django.db.models import Q
 # Create your views here.
 
 def index(request):
@@ -57,18 +58,29 @@ def detailrespon(request):
         'respons' : respons
     })
     
-def search(request):
-    searchValue =''
-    form= Search(request.POST or None)
-    if form.is_valid():
-        searchValue= form.cleaned_data.get('search')
+# def search(request):
+#     searchValue =''
+#     form= Search(request.POST or None)
+#     if form.is_valid():
+#         searchValue= form.cleaned_data.get('search')
         
-    searchResult= Artikel.objects.filter(judul_artikel__icontains= searchValue)
-    context={'form': form,
-             'searchResult': searchResult,
-             }
+#     searchResult= Artikel.objects.filter(judul_artikel__icontains= searchValue)
+#     context={'form': form,
+#              'searchResult': searchResult,
+#              }
     
-    return render(request, 'search.html', context)
+#     return render(request, 'search.html', context)
+
+class SearchResultView(ListView):
+    model = Artikel
+    template_name = 'search.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Artikel.objects.filter(
+                Q(judul_artikel__icontains = query) | Q(kategori__nama_kategori__icontains = query)
+        )
+        return object_list
 
 def signup(request):
     if request.method == 'POST':
