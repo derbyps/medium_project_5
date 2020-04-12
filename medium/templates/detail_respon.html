@@ -38,7 +38,7 @@
                     <span style="font-weight: bold;">Showing responses for:</span>
                     <div class="img-thumbnail" style="height: 62px; background-color: white;">
                         <div class="d-flex justify-content-between p-2">
-                            <span>Title<br><p style="color: #7F8F6F;">author</p></span>
+                            <span>title<br><p style="color: #7F8F6F;">author</p></span>
                             <span>Claps</span>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </section>
-
+    {% for respon in respons%}
     <section style="margin-top: 10px;">
         <div class="container">
             <div class="row">
@@ -58,8 +58,8 @@
                                 <img src="{% static 'images/profil1.png' %}" class="rounded-circle" style="height: 48px; width: 48px">
                             </div>
                             <div class="col-sm-6">
-                                <span>Author</span><br>
-                                <span style="color: #777777; font-size: 13px;">Just Now</span>    
+                                <span>{{respon.komentator}}</span><br>
+                                <span style="color: #777777; font-size: 13px;">{{respon.pub_komen}}</span>    
                             </div>
                         </div>
                         <div class="row p-4">
@@ -70,6 +70,7 @@
             </div>
         </div>
     </section>
+    {%endfor%}
 
     <footer style="height: 265px; background-color: black;">
         <div class="row pt-2">

@@ -26,6 +26,7 @@ class Artikel(models.Model):
     kategori = models.ForeignKey(Kategori, on_delete=models.CASCADE)
     media_artikel = models.FileField()
     pub_date = models.DateField('date published')
+    clap = models.IntegerField(default=0)
 
     def __str__(self):
         return self.judul_artikel

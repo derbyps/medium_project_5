@@ -77,10 +77,14 @@
                         <div class="col-sm-6" >
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <img src="{% static 'images/clap-noborder.png' %}" style="height: 48px;">
+                                    <a href="/artikel/clap/{{artikels.id}}">
+
+                                        <img src="{% static 'images/clap-noborder.png' %}" style="height: 48px;">
+                                    </a>
                                 </div>
                                 <div class="col-sm-5">
-                                    <span>{{artikels.like_set.all|length}} claps</span>  
+                                    <span>{{artikels.clap}} claps</span>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -92,7 +96,39 @@
                             <img src="{% static 'images/3dot-logo.png' %}" style="width: 29px; height: 29px;" class="ml-2">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success get-start font-segoe" style="width: inherit; background-color: white;"><span style="color: grey;">See Responses</span></button>
+                    <button type="button" class="btn btn-success get-start font-segoe" style="width: inherit; background-color: white;"><span style="color: grey;"><a href="{{artikel.pk}}">See Responses</a></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="margin-top: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-3">
+                    <span style="font-weight: bold;">Responses</span>
+                    <div class="col-12">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <textarea class="form-control" name="commenttt" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <button type="submit" class="btn btn-primary">Primary</button>
+                        </form>
+                    </div>
+                    {% for komen in artikels.respon_set.all %}
+                    <div class="img-thumbnail" style="height:auto; background-color: white;">
+                        <div class="row p-2">
+                            <div class="col-sm-2">
+                                <img src="{% static 'images/profil1.png' %}" class="rounded-circle" style="height: 48px; width: 48px">
+                            </div>
+                            <div class="col-sm-6">
+                                <span>{{komen.komentator}}</span><br>
+                                <span style="color: #777777; font-size: 13px;">{{komen.pub_komen}}</span>    
+                            </div>
+                        </div>
+                        <div class="row p-4">
+                           {{komen.komen_artikel}}
+                        </div>
+                    </div>
+                    {%endfor%}
                 </div>
             </div>
         </div>
