@@ -19,6 +19,9 @@ def artikel_detail(request, artikel_id):
     return render(request, 'detail_artikel.html',{
         'artikels' : artikels, 'post_active' : True
     })
+
+def detailrespon(request):
+    return render(request, 'detail_respon.html')
     
 def search(request):
     searchValue =''

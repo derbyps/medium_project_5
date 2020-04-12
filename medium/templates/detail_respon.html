@@ -31,41 +31,19 @@
         </nav>
     </header>
 
-    <section style="margin-top: 200px;">
+    <section style="margin-top: 100px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 offset-3">
-                    <h2 style="font-size: 40px; font-family: Georgia, 'Times New Roman', Times, serif;">{{artikels.judul_artikel}}</h2>
-                    <div class="row d-flex justify-content-between" style="margin-bottom: 10%; margin-top: 5%;">
-                        <div class="col-lg-6" >
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <img src="{% static 'images/profil1.png' %}" class="rounded-circle" style="height: 48px; width: 48px">
-                                </div>
-                                <div class="col-sm-6">
-                                    <span>{{artikels.author}}</span><br>
-                                    <span style="color: #777777; font-size: 13px;">{{artikels.pub_date}}</span>    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-flex justify-content-end">
-                            <img src="{% static 'images/twitter-logo.png' %}" style="width: 29px; height: 29px">
-                            <img src="{% static 'images/linkedin-logo.png' %}" style="width: 23.5px; height: 23.5px; margin-top: 2.5px;" class="ml-2">
-                            <img src="{% static 'images/fb-logo.png' %}" style="width: 29px; height: 29px" class="ml-2">
-                            <img src="{% static 'images/bookmark-logo.png' %}" style="width: 20px; height: 20px; margin-top: 5px;" class="ml-2">
-                            <img src="{% static 'images/3dot-logo.png' %}" style="width: 29px; height: 29px;" class="ml-2">
+                <div class="col-sm-6 offset-3">
+                    <span style="font-weight: bold;">Showing responses for:</span>
+                    <div class="img-thumbnail" style="height: 62px; background-color: white;">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Title<br><p style="color: #7F8F6F;">author</p></span>
+                            <span>Claps</span>
                         </div>
                     </div>
-                    <img src="{{artikels.media_artikel.url}}"class="img-fluid">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 offset-3">
-                    <br>
-                    <span>{{artikels.isi_artikel}}</span><br><br>
-                    <br><br>
-                </div>
-            </div><br>
         </div>
     </section>
 
@@ -73,26 +51,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 offset-3">
-                    <div class="row d-flex justify-content-between" style="margin-bottom: 10%; margin-top: 5%;">
-                        <div class="col-sm-6" >
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <img src="{% static 'images/clap-noborder.png' %}" style="height: 48px;">
-                                </div>
-                                <div class="col-sm-5">
-                                    <span>{{artikels.like_set.all|length}} claps</span>  
-                                </div>
+                    <span style="font-weight: bold;">Responses</span>
+                    <div class="img-thumbnail" style="height:auto; background-color: white;">
+                        <div class="row p-2">
+                            <div class="col-sm-2">
+                                <img src="{% static 'images/profil1.png' %}" class="rounded-circle" style="height: 48px; width: 48px">
+                            </div>
+                            <div class="col-sm-6">
+                                <span>Author</span><br>
+                                <span style="color: #777777; font-size: 13px;">Just Now</span>    
                             </div>
                         </div>
-                        <div class="col-lg-6 d-flex justify-content-end">
-                            <img src="{% static 'images/twitter-logo.png' %}" style="width: 29px; height: 29px">
-                            <img src="{% static 'images/linkedin-logo.png' %}" style="width: 23.5px; height: 23.5px; margin-top: 2.5px;" class="ml-2">
-                            <img src="{% static 'images/fb-logo.png' %}" style="width: 29px; height: 29px" class="ml-2">
-                            <img src="{% static 'images/bookmark-logo.png' %}" style="width: 20px; height: 20px; margin-top: 5px;" class="ml-2">
-                            <img src="{% static 'images/3dot-logo.png' %}" style="width: 29px; height: 29px;" class="ml-2">
+                        <div class="row p-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure illo quos quod velit! Animi cumque reprehenderit itaque consequuntur officia ipsum officiis vero enim magnam. Aut at repellat eos natus animi.
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success get-start font-segoe" style="width: inherit; background-color: white;"><span style="color: grey;">See Responses</span></button>
                 </div>
             </div>
         </div>
