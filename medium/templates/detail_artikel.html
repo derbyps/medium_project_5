@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium - Get smarter about what matters to you.</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="fixed-top backgrd" style="height: 75px;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href=""></a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mr-auto d-flex align-items-center">
+                        <h5 style=" font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: 35px;">Medium<span class="sr-only"></h5>
+                    </div>
+                    <div class="navbar-nav ml-auto d-flex align-items-center">
+                        <a class="nav-item nav-link font-segoe" href="">Subscribe</a>
+                        <a class="nav-item nav-link font-segoe" href="">Write</a>
+                        <a class="nav-item nav-link font-segoe" href="">Sign In</a>
+                        <button type="button" class="btn btn-success get-start-header font-segoe">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section style="margin-top: 200px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-3">
+                    <h2 style="font-size: 40px; font-family: Georgia, 'Times New Roman', Times, serif;">{{artikels.judul_artikel}}</h2>
+                    <div class="row d-flex justify-content-between" style="margin-bottom: 10%; margin-top: 5%;">
+                        <div class="col-lg-6" >
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <img src="{{artikels.Users.profile_pic.url}}" class="rounded-circle" style="height: 48px; width: 48px">
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>{{artikels.author}}</span><br>
+                                    <span style="color: #777777; font-size: 13px;">{{artikels.pub_date}}</span>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-end">
+                            <img src="{% static 'images/twitter-logo.png' %}" style="width: 29px; height: 29px">
+                            <img src="{% static 'images/linkedin-logo.png' %}" style="width: 23.5px; height: 23.5px; margin-top: 2.5px;" class="ml-2">
+                            <img src="{% static 'images/fb-logo.png' %}" style="width: 29px; height: 29px" class="ml-2">
+                            <img src="{% static 'images/bookmark-logo.png' %}" style="width: 20px; height: 20px; margin-top: 5px;" class="ml-2">
+                            <img src="{% static 'images/3dot-logo.png' %}" style="width: 29px; height: 29px;" class="ml-2">
+                        </div>
+                    </div>
+                    <img src="{{artikels.media_artikel.url}}"class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-3">
+                    <br>
+                    <span>{{artikels.isi_artikel}}</span><br><br>
+                    <br><br>
+                </div>
+            </div><br>
+        </div>
+    </section>
+
+    <footer style="height: 265px; background-color: black;">
+        <div class="row pt-2">
+            <div class="col-sm-9 offset-1 pt-4">
+                <img src="{% static '/images/medium_footer.jpg' %}" style="width: 35px; height:35px">
+                <ul class="list-unstyled pt-3">
+                    <li class="pr-5">Get Started</li>
+                    <li class="pr-5">Subscribe</li>
+                    <li><span style="color:#7F8F6F;">Have an account?</span>&nbsp&nbspSign in</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="pr-5">About Medium</li>
+                    <li class="pr-5">Write</li>
+                    <li class="pr-5">Gift</li>
+                    <li class="pr-5">Help</li>
+                    <li class="pr-5">Press Contacts</li>
+                    <li class="pr-5">Careers</li>
+                    <li>Legal</li>
+                </ul>
+                <p style="color:#7F8F6F; font-size: 13px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">© 2020 A Medium Corporation</p>
+            </div>
+            <div class="col-sm-2">
+                <p style="color:#7F8F6F; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Get the Medium app</p>
+                <img src="{% static '/images/astore.png' %}" style="width: 135px; height:38px">
+                <img src="{% static '/images/gplay.png' %}" style="width: 154px; margin-left: -9px;">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

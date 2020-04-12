@@ -92,7 +92,7 @@
                         <div class="row daftar-artikel">
                             <div class="col-sm-8">
                                 <h6 style="color: gray;">BASED ON YOUR READING HISTORY</h6>
-                                <h5>{{artikel.judul_artikel}}</h5>
+                                <h5><a href="{{artikel.pk}}">{{artikel.judul_artikel}}</a></h5>
                                 <p>{{artikel.isi_artikel|truncatewords:15}}</p>
                                 <span style="font-size: 13px; font-weight: bold;">{{artikel.author}}</span><br>
                                 <span style="font-size: 13px; color: #B78F7F;">{{artikel.pub_date}}</span>
