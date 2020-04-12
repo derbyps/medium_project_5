@@ -6,4 +6,5 @@ urlpatterns =[
     path('', views.index, name='index'),
     path('artikel/', views.artikel, name='artikel'),
     path('artikel/<int:artikel_id>/', views.artikel_detail, name='artikel_detail'),
+    path('search/', views.search, name='search'),
 ]
