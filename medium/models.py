@@ -8,6 +8,9 @@ class Users(models.Model):
     email_user = models.CharField(max_length=100)
     profile_pic = models.FileField()
     password = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.username
 
 class Kategori(models.Model):
     nama_kategori = models.CharField(max_length=255)
@@ -23,6 +26,7 @@ class Artikel(models.Model):
     kategori = models.ForeignKey(Kategori, on_delete=models.CASCADE)
     media_artikel = models.FileField()
     pub_date = models.DateField('date published')
+    clap = models.IntegerField(default=0)
 
     def __str__(self):
         return self.judul_artikel

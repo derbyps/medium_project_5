@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium - Get Smarter about what matters to ypu.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="fixed-top backgrd" style="height: 75px;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href=""></a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mr-auto d-flex align-items-center">
+                        <a href="{% url 'index' %}" style="text-decoration: none;">
+                            <h5 style=" font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: 35px; color: black;">Medium<span class="sr-only"></h5>
+                        </a>
+                    </div>
+                    <div class="navbar-nav ml-auto d-flex align-items-center">
+                        <a class="nav-item nav-link font-segoe" href="">Subscribe</a>
+                        <a class="nav-item nav-link font-segoe" href="">Write</a>
+                        <a class="nav-item nav-link font-segoe" href="{% url 'signup' %}">Sign Up</a>
+                        <a href="{% url 'artikel' %}">
+                            <button type="button" class="btn btn-success get-start-header font-segoe">Get Started</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="jumbotron jumbotron-fluid bg-white mt-5" style="height: 250px;">
+        <div class="container">
+            <h2 style="line-height: 85px; font-size: 85px; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">Get smarter about what matter to you.</h2>
+        </div>
+    </div>
+    
+    <div class="container justify-content-center mb-5" style="margin-top: 100px;">
+        <div class="row justify-content-center">
+            <div class="col-sm-12" style="text-align: center;">
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspFuture</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/oz.png' %}" class="rounded-circle im-cat">&nbspOneZero</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/gen.png' %}" class="rounded-circle im-cat">&nbspTechnology</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/blink.png' %}" class="rounded-circle im-cat">&nbspElemental</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspHealth</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspSience</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/gen.png' %}" class="rounded-circle im-cat">&nbspGEN</span><br><br>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspBusiness</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/me.png' %}" class="rounded-circle im-cat">&nbspMarker</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspWork</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspCulture</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/zora.png' %}" class="rounded-circle im-cat">&nbspZora</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/plant.png' %}" class="rounded-circle im-cat">&nbspTenderly</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspFood</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/heated.png' %}" class="rounded-circle im-cat">&nbspHeated</span><br><br>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspProgramming</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspDesign</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspLGBTQIA</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspNeuroscience</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/m.png' %}" class="rounded-circle im-cat">&nbspModus</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspPolitics</span><br><br>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspRelationships</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/ball.png' %}" class="rounded-circle im-cat">&nbspHuman Parts</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspSelf</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspStartups</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspCryptocurrency</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/forge.png' %}" class="rounded-circle im-cat">&nbspForge</span><br><br>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspData Science</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspProductivity</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspArtificial Intelligence</span>
+                <span class="border rounded-pill p-2 br-cat"><img src="{% static 'images/hastag.png' %}" class="rounded-circle im-cat">&nbspElection 2020</span>
+            </div>
+        </div>
+    </div>
+
+    <section style="text-align: center; height: 200px;">
+        <h5 style="text-align: center; font-weight: bold;">Select what you're into. We'll help you find great things to read.</h5>
+        <a href="{% url 'artikel' %}">
+            <button type="button" class="btn btn-success get-start mb-3 mt-3 font-segoe">Get Started</button>
+        </a>
+        <p>Already have an account? <span style="color: #D3A47D;"> Sign in.</span></p>
+    </section>
+
+    <section>
+        <div class="container" style="height: 150px;">
+            <div class="row">
+                <div class=col-sm-3>
+                    <p class="ceklis"><img src="{% static 'images/checklist.png' %}" style="height: 28px; width:28px">&nbspWorld-class publications.</p>
+                </div>
+                <div class=col-sm-3>
+                    <p class="ceklis"><img src="{% static 'images/checklist.png' %}" style="height: 28px; width:28px">&nbspUndiscovered voices.</p>
+                </div>
+                <div class=col-sm-3>
+                    <p class="ceklis"><img src="{% static 'images/checklist.png' %}" style="height: 28px; width:28px">&nbspTopics you love.</p>
+                </div>
+                <div class=col-sm-3>
+                    <p style="font-weight: bold; font-size: 20px;">All on Medium, all for you.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" style="height: 150px;">
+            <h2 style="line-height: 85px; font-size: 70px; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif;">No ads. No problems.</h2>
+            <h3 class="ceklis" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Your privacy stays yours. We don’t sell your data or target you with ads. Ever.</h3>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" style="height: 330px;">
+            <div class="row">
+                <div class="col-sm-6 d-flex align-items-end">
+                    <a href="{% url 'artikel' %}">
+                        <button type="button" class="btn btn-success get-start font-segoe">Get Started</button>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <h5 style="font-weight: bold;">We do things differently.</h5><br>
+                    <p class="ceklis">Medium is not like any other platform on the internet. <mark></mark>Our sole purpose is to help you find compelling ideas, knowledge, and perspectives. We don’t serve ads—we serve you, the curious reader who loves to learn new things. Medium is home to thousands of independent voices, and we combine humans and technology to find the best reading for you—and filter out the rest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="height: 100px;">
+        <hr style="width: 500px;" align="center">
+    </section>
+
+    <section>
+        <div class="container" style="height: 550px;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2 style="line-height: 85px; font-size: 70px; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif;">120 million curious readers and growing.</h2>
+                </div>
+                <div class="col-sm-6">
+                    <div class="img-thumbnail" style="height: 450px; background-color: #CEFDE9;">
+                        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-interval="5000">
+                                    <p class="p-5 quote">Medium is truly where ideas are born, shared, and spread.</p>
+                                    <div class="align-items-end"> 
+                                        <span class="speech"><img src="{% static 'images/first.jpeg' %}" class="rounded-circle p-5">Jasmine Bina</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="5000">
+                                    <p class="p-5 quote">Medium is a great place to read and learn from a wide range of authors. It’s not muddied up by ads. It’s not fake news. It feels like one of the few pure places to go online.</p>
+                                    <div class="align-items-end"> 
+                                        <span class="speech"><img src="{% static 'images/second.jpeg' %}" class="rounded-circle p-5">Jackie Colburn</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="5000">
+                                    <p class="p-5 quote">Do yourself a favor and start browsing Medium for high quality articles on just about ANY topic. Get those mental gears turning!</p>
+                                    <div class="align-items-end"> 
+                                        <span class="speech"><img src="{% static 'images/third.jpeg' %}" class="rounded-circle p-5">Rosemichelle Marzan</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="5000">
+                                    <p class="p-5 quote">I love Medium’s new publications: OneZero, GEN, Heated. And, I’m especially excited about Tenderly.</p>
+                                    <div class="align-items-end"> 
+                                        <span class="speech"><img src="{% static 'images/fourth.jpeg' %}" class="rounded-circle p-5">Raquel Ledezma-Haight</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="5000">
+                                    <p class="p-5 quote">In a web full of pseudo thought-leaders, Medium is the one place that I can reliably come to and be better informed in the easiest way possible of the things that matter to me.</p>
+                                    <div class="align-items-end"> 
+                                        <span class="speech"><img src="{% static 'images/fifth.jpeg' %}" class="rounded-circle p-5">Paul Fabretti</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="5000">
+                                    <p class="p-5 quote">Medium is trying to shift the paradigm. They’re catering to those looking for fresh, new, authentic voices. I believe wholeheartedly in their mission.</p>
+                                    <div class="align-items-end"> 
+                                        <span class="speech"><img src="{% static 'images/sixth.jpeg' %}" class="rounded-circle p-5">Joel Leon</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="text-align: center; height: 150px;">
+        <h5 style="text-align: center; font-weight: bold;">One Subscription. Unlimited Ideas.</h5>
+        <p class="ceklis">Read unlimited stories with an optional subscription of $5/month.<br>If it's not for you, cancel anytime.</p>
+    </section>
+
+    <section style="height: 100px;">
+        <hr style="width: 500px;" align="center">
+    </section>
+
+    <section>
+        <div class="container" style="height: 200px;">
+            <h2 style="line-height: 85px; font-size: 70px; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">Expand your reading.<br>Expand your mind.</h2>
+        </div>
+    </section>
+
+    <div style="height: 100px;">
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'artikel' %}">
+                <button type="button" class="btn btn-success get-start font-segoe">Get Started</button>
+            </a>
+        </div>
+    </div>
+
+    <footer style="height: 265px; background-color: black;">
+        <div class="row pt-2">
+            <div class="col-sm-9 offset-1 pt-4">
+                <img src="{% static '/images/medium_footer.jpg' %}" style="width: 35px; height:35px">
+                <ul class="list-unstyled pt-3">
+                    <li class="pr-5">Get Started</li>
+                    <li class="pr-5">Subscribe</li>
+                    <li><span style="color:#7F8F6F;">Have an account?</span>&nbsp&nbspSign in</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="pr-5">About Medium</li>
+                    <li class="pr-5">Write</li>
+                    <li class="pr-5">Gift</li>
+                    <li class="pr-5">Help</li>
+                    <li class="pr-5">Press Contacts</li>
+                    <li class="pr-5">Careers</li>
+                    <li>Legal</li>
+                </ul>
+                <p style="color:#7F8F6F; font-size: 13px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">© 2020 A Medium Corporation</p>
+            </div>
+            <div class="col-sm-2">
+                <p style="color:#7F8F6F; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Get the Medium app</p>
+                <img src="{% static '/images/astore.png' %}" style="width: 135px; height:38px">
+                <img src="{% static '/images/gplay.png' %}" style="width: 154px; margin-left: -9px;">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* CSS HEADER */
+
+.get-start{
+    background-color: #03A87C;
+    border-color: #03A87C;
+    height: 62px;
+    width: 340px;
+}
+
+.backgrd{
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(193,195,199,1);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(193,195,199,1);
+    box-shadow: 0px 3px 6px 0px rgba(193,195,199,1);
+}
+
+.get-start-header{
+    background-color: #03A87C;
+    border-color: #03A87C;
+    height: 36px;
+    width: 150px;
+} 
+
+.ceklis{
+    font-size: 20px;
+    color: #877777;
+    font-weight: 300;
+}
+
+.speech{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quote{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* CSS FOR FOOTERS*/
+ul li{
+    display: inline-block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-segoe{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-lucida{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.art-aut{
+    font-size: 15px;
+}
+
+.br-cat{
+    background-color: #F1F1F1; 
+    font-size: 20px; 
+    color: #CC9779;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 10px;
+}
+
+.im-cat{
+    width: 30px; 
+    height: 30px; 
+    margin-top: -4px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(3,168,124,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(3,168,124,1);
+    box-shadow: 0px 0px 5px 0px rgba(3,168,124,1);
+}

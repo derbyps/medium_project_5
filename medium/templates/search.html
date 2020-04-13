@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <br><br><br><br><br>
+{% for artikel in object_list %}
+
+    <div class="container">
+        <div class="row daftar-artikel">
+            <div class="col-sm-8">
+                <h6 style="color: gray;">BASED ON YOUR READING HISTORY</h6>
+                <h5><a href="{{artikel.pk}}">{{artikel.judul_artikel}}</a></h5>
+                <p>{{artikel.isi_artikel|truncatewords:15}}</p>
+                <span style="font-size: 13px; font-weight: bold;">{{artikel.author}}</span><br>
+                <span style="font-size: 13px; color: #B78F7F;">{{artikel.pub_date}}</span>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{artikel.media_artikel.url}}" class="img-fluid">
+            </div>
+        </div>
+    </div><br>
+
+{% endfor %}
+
+{% endblock %}

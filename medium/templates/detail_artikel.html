@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <section style="margin-top: 200px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-3">
+                    <h2 style="font-size: 40px; font-family: Georgia, 'Times New Roman', Times, serif;">{{artikels.judul_artikel}}</h2>
+                    <div class="row d-flex justify-content-between" style="margin-bottom: 10%; margin-top: 5%;">
+                        <div class="col-lg-6" >
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <img src="{% static 'images/profil1.png' %}" class="rounded-circle" style="height: 48px; width: 48px">
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>{{artikels.author}}</span><br>
+                                    <span style="color: #777777; font-size: 13px;">{{artikels.pub_date}}</span>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-end">
+                            <img src="{% static 'images/twitter-logo.png' %}" style="width: 29px; height: 29px">
+                            <img src="{% static 'images/linkedin-logo.png' %}" style="width: 23.5px; height: 23.5px; margin-top: 2.5px;" class="ml-2">
+                            <img src="{% static 'images/fb-logo.png' %}" style="width: 29px; height: 29px" class="ml-2">
+                            <img src="{% static 'images/bookmark-logo.png' %}" style="width: 20px; height: 20px; margin-top: 5px;" class="ml-2">
+                            <img src="{% static 'images/3dot-logo.png' %}" style="width: 29px; height: 29px;" class="ml-2">
+                        </div>
+                    </div>
+                    <img src="{{artikels.media_artikel.url}}"class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-3">
+                    <br>
+                    <span>{{artikels.isi_artikel}}</span><br><br>
+                    <br><br>
+                </div>
+            </div><br>
+        </div>
+    </section>
+
+    <section style="margin-top: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-3">
+                    <div class="row d-flex justify-content-between" style="margin-bottom: 10%; margin-top: 5%;">
+                        <div class="col-sm-6" >
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <a href="/artikel/clap/{{artikels.id}}">
+
+                                        <img src="{% static 'images/clap-noborder.png' %}" style="height: 48px;">
+                                    </a>
+                                </div>
+                                <div class="col-sm-5">
+                                    <span>{{artikels.clap}} claps</span>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-end">
+                            <img src="{% static 'images/twitter-logo.png' %}" style="width: 29px; height: 29px">
+                            <img src="{% static 'images/linkedin-logo.png' %}" style="width: 23.5px; height: 23.5px; margin-top: 2.5px;" class="ml-2">
+                            <img src="{% static 'images/fb-logo.png' %}" style="width: 29px; height: 29px" class="ml-2">
+                            <img src="{% static 'images/bookmark-logo.png' %}" style="width: 20px; height: 20px; margin-top: 5px;" class="ml-2">
+                            <img src="{% static 'images/3dot-logo.png' %}" style="width: 29px; height: 29px;" class="ml-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="margin-top: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-3">
+                    <span style="font-weight: bold;">Post Your Response</span>
+                    <div class="col-12">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <textarea class="form-control" name="commenttt" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <div class="d-flex justify-content-end mt-1">
+                                <button type="submit" class="btn btn-primary">Submit Comment</button>
+                            </div>
+                        </form>
+                    </div><br>
+                    <span style="font-weight: bold;">Responses</span>
+                    {% for komen in artikels.respon_set.all %}
+                    <div class="img-thumbnail" style="height:auto; background-color: white;">
+                        <div class="row p-2">
+                            <div class="col-sm-2">
+                                <img src="{% static 'images/profil1.png' %}" class="rounded-circle" style="height: 48px; width: 48px">
+                            </div>
+                            <div class="col-sm-6">
+                                <span>{{komen.komentator}}</span><br>
+                                <span style="color: #777777; font-size: 13px;">{{komen.pub_komen}}</span>    
+                            </div>
+                        </div>
+                        <div class="row p-4">
+                           {{komen.komen_artikel}}
+                        </div>
+                    </div><br>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="height: 265px; background-color: black;">
+        <div class="row pt-2">
+            <div class="col-sm-9 offset-1 pt-4">
+                <img src="{% static '/images/medium_footer.jpg' %}" style="width: 35px; height:35px">
+                <ul class="list-unstyled pt-3">
+                    <li class="pr-5">Get Started</li>
+                    <li class="pr-5">Subscribe</li>
+                    <li><span style="color:#7F8F6F;">Have an account?</span>&nbsp&nbspSign in</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="pr-5">About Medium</li>
+                    <li class="pr-5">Write</li>
+                    <li class="pr-5">Gift</li>
+                    <li class="pr-5">Help</li>
+                    <li class="pr-5">Press Contacts</li>
+                    <li class="pr-5">Careers</li>
+                    <li>Legal</li>
+                </ul>
+                <p style="color:#7F8F6F; font-size: 13px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">© 2020 A Medium Corporation</p>
+            </div>
+            <div class="col-sm-2">
+                <p style="color:#7F8F6F; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Get the Medium app</p>
+                <img src="{% static '/images/astore.png' %}" style="width: 135px; height:38px">
+                <img src="{% static '/images/gplay.png' %}" style="width: 154px; margin-left: -9px;">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+{% endblock %}
