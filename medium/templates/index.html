@@ -18,13 +18,17 @@
                 <a class="navbar-brand" href=""></a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mr-auto d-flex align-items-center">
-                        <h5 style=" font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: 35px;">Medium<span class="sr-only"></h5>
+                        <a href="{% url 'index' %}" style="text-decoration: none;">
+                            <h5 style=" font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: 35px; color: black;">Medium<span class="sr-only"></h5>
+                        </a>
                     </div>
                     <div class="navbar-nav ml-auto d-flex align-items-center">
                         <a class="nav-item nav-link font-segoe" href="">Subscribe</a>
                         <a class="nav-item nav-link font-segoe" href="">Write</a>
-                        <a class="nav-item nav-link font-segoe" href="">Sign In</a>
-                        <button type="button" class="btn btn-success get-start-header font-segoe">Get Started</button>
+                        <a class="nav-item nav-link font-segoe" href="{% url 'signup' %}">Sign Up</a>
+                        <a href="{% url 'artikel' %}">
+                            <button type="button" class="btn btn-success get-start-header font-segoe">Get Started</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -78,7 +82,9 @@
 
     <section style="text-align: center; height: 200px;">
         <h5 style="text-align: center; font-weight: bold;">Select what you're into. We'll help you find great things to read.</h5>
-        <button type="button" class="btn btn-success get-start mb-3 mt-3 font-segoe">Get Started</button>
+        <a href="{% url 'artikel' %}">
+            <button type="button" class="btn btn-success get-start mb-3 mt-3 font-segoe">Get Started</button>
+        </a>
         <p>Already have an account? <span style="color: #D3A47D;"> Sign in.</span></p>
     </section>
 
@@ -112,7 +118,9 @@
         <div class="container" style="height: 330px;">
             <div class="row">
                 <div class="col-sm-6 d-flex align-items-end">
-                    <button type="button" class="btn btn-success get-start font-segoe">Get Started</button>
+                    <a href="{% url 'artikel' %}">
+                        <button type="button" class="btn btn-success get-start font-segoe">Get Started</button>
+                    </a>
                 </div>
                 <div class="col-sm-6">
                     <h5 style="font-weight: bold;">We do things differently.</h5><br>
@@ -205,7 +213,9 @@
 
     <div style="height: 100px;">
         <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-success get-start font-segoe">Get Started</button>
+            <a href="{% url 'artikel' %}">
+                <button type="button" class="btn btn-success get-start font-segoe">Get Started</button>
+            </a>
         </div>
     </div>
 
